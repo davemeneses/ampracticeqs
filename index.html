@@ -7,24 +7,26 @@
     <title>AM Office Hours</title>
   </head>
   <!-- 
+    Solutions are in the logic.js file!!
+
     1. Given an unsorted array of n elements, find if the element k is present in the array or not. 
-    Comoplete the findNumber function in the editor below. It has 2 parameters:
+    Complete the findNumber function in the editor below. It has 2 parameters:
         1. An array of integers, arr, denoting the elements in the array.
-        2. An integer, k, denoting the elemnt to be searched in the array. 
-    The function must return a strin "YES" or "NO" denoting if the element is present in the array or not.
-    The firs tline contains an integer n, denoting the number of elements in the array arr.
-    Ech line i of the n subsequent lines (where 0<= i < n) contain an integer describing arr.
+        2. An integer, k, denoting the element to be searched in the array. 
+    The function must return a string "YES" or "NO" denoting if the element is present in the array or not.
+    The first line contains an integer n, denoting the number of elements in the array arr.
+    Each line i of the n subsequent lines (where 0<= i < n) contain an integer describing arr.
     The next line contains an integer, k, the element that needs to be searched.
 
     2. Return only the odd numbers between 2 given number. Let the starting point be l and the ending point be r.
         Complete the oddNumbers function below.
 
     3. Crashing Stones
-    Joe is a prisoner who has been sentenced to hard labor for his crimes. Each day he is given a pile of large rocks to break into tiny rocks. To make matters worse, thtey do not provide any tools to with with. Instead, he much use the rocks themselves. He always picks up the largest two stones and smashes them together. If they are of equal weight, they both disintegrate entirely. If one is larger, the small one is disintegrated and the larger one is reduced by the weight of the smaller one. Eventually there is either one stone left that cannot be broken or all of the stones have been smashed. Determine the weight of the last stone, or return 0 if there is none.
+    Joe is a prisoner who has been sentenced to hard labor for his crimes. Each day he is given a pile of large rocks to break into tiny rocks. To make matters worse, they do not provide any tools to do this with. Instead, he much use the rocks themselves. He always picks up the largest two stones and smashes them together. If they are of equal weight, they both disintegrate entirely. If one is larger, the small one is disintegrated and the larger one is reduced by the weight of the smaller one. Eventually there is either one stone left that cannot be broken or all of the stones have been smashed. Determine the weight of the last stone, or return 0 if there is none.
 
-    For example, there are stones of weights a = [1,2,3,6,7,7,]. He always starts with the two largest stones. In this case, the two have equal weights oof 7 so they both crumble when smashed. Next he smashes weights 3 and 6. Ther smaller one is destroyed and the larger weights 6-3 = 3 units. Weights 3 and 2 are smashed together which leaves a stone of weight 1. This is smashed with the last remaining stone of weight 1. There are no stones left, so the remaining stoone weight is 0.
+    For example, there are stones of weights a = [1,2,3,6,7,7,]. He always starts with the two largest stones. In this case, the two have equal weights of 7 so they both crumble when smashed. Next he smashes weights 3 and 6. The smaller one is destroyed and the larger weights 6-3 = 3 units. Weights 3 and 2 are smashed together which leaves a stone of weight 1. This is smashed with the last remaining stone of weight 1. There are no stones left, so the remaining stone weight is 0.
 
-    Complete the function lastStoneWeight in the editor below. The function must return an integer that denotes hte weight of the las tstone or 0 if all stones shattered into dust.
+    Complete the function lastStoneWeight in the editor below. The function must return an integer that denotes hte weight of the last stone or 0 if all stones shattered into dust.
 
     lastStoneWeight has the following parameters:
     a[a[0],....a[n-1]]: an array of integers, the weights of each stone.
@@ -33,14 +35,37 @@
   <body>
     <script>
       // Question 1
+      // let testArr = [1, 2, 2, 2, 3, 3, 4, 5];
+      // let testNum = 7;
 
-      //   function findNumber(arr, k) {}
+      // function findNumber(arr, k) {
+      //   let newSet = new Set(arr);
+      //   // console.log(newSet);
+      //   if (newSet.has(k)) {
+      //     console.log("YES");
+      //   } else {
+      //     console.log("NO");
+      //   }
+      // }
 
+      // findNumber(testArr, testNum);
       //   Question 2
-      // function oddNumbers(l, r) {}
+      function oddNumbers(l, r) {
+        let toReturn = [];
+        for (let i = l; i <= r; i++) {
+          if (i % 2 == 0) {
+            continue;
+          } else toReturn.push(i);
+        }
+        console.log(toReturn);
+      }
+
+      oddNumbers(-2, 3);
 
       //   Question 3
       // we're just pseudo coding this one!!!!
+
+      //
     </script>
   </body>
 </html>
